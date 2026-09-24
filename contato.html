@@ -10,12 +10,14 @@
   <meta property="og:title" content="Contato — Mecano Soluções Digitais" />
   <meta property="og:description" content="Vamos falar sobre o seu projeto." />
   <meta property="og:locale" content="pt_BR" />
+  <meta name="theme-color" content="#0e0d0b" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/tokens.css" />
   <link rel="stylesheet" href="css/style.css" />
+  <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
   <a class="skip-link" href="#main">Pular para o conteúdo</a>
@@ -23,9 +25,10 @@
   <header class="site-header">
     <div class="container bar">
       <a class="logo" href="index.html" aria-label="Mecano Soluções Digitais — início">
-        <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#0a0a0b"/><path d="M8 22V10l8 7 8-7v12" fill="none" stroke="#ff5a1f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        Mecano
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="0.5" y="0.5" width="31" height="31" rx="7" fill="#181613" stroke="#2c2924"/><path d="M8 22V10l8 7 8-7v12" fill="none" stroke="#ff5a1f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Mecano</span>
       </a>
+
       <nav class="nav-primary" aria-label="Navegação principal">
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -34,122 +37,160 @@
           <li><a href="contato.html" aria-current="page">Contato</a></li>
         </ul>
       </nav>
-      <a class="btn btn-primary nav-cta" href="contato.html">Pedir diagnóstico</a>
-      <button class="menu-toggle" aria-expanded="false" aria-controls="nav-mobile" aria-label="Abrir menu">
-        <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+
+      <a class="btn btn-primary btn-sm nav-cta" href="contato.html">
+        Pedir diagnóstico
+        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-mobile" aria-label="Abrir menu">
+        <span class="menu-toggle-bars" aria-hidden="true"></span>
       </button>
     </div>
   </header>
 
-  <nav class="nav-mobile" id="nav-mobile" aria-label="Navegação mobile">
+  <nav class="nav-mobile" id="nav-mobile" aria-label="Navegação mobile" inert>
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="sobre.html">Sobre</a></li>
-      <li><a href="servicos.html">Serviços</a></li>
-      <li><a href="contato.html">Contato</a></li>
+      <li><a href="index.html"><span class="nav-mobile-num">01</span>Home</a></li>
+      <li><a href="sobre.html"><span class="nav-mobile-num">02</span>Sobre</a></li>
+      <li><a href="servicos.html"><span class="nav-mobile-num">03</span>Serviços</a></li>
+      <li><a href="contato.html" aria-current="page"><span class="nav-mobile-num">04</span>Contato</a></li>
     </ul>
-    <a class="btn btn-primary" href="contato.html">Pedir diagnóstico</a>
+    <a class="btn btn-primary btn-lg" href="contato.html">Pedir diagnóstico gratuito</a>
   </nav>
 
   <main id="main">
-    <section class="hero section-dark" style="padding-block: var(--sp-8);">
+    <section class="page-hero section-dark">
+      <div class="blueprint" aria-hidden="true"></div>
       <div class="container">
-        <span class="tag">Contato</span>
-        <h1>Vamos falar sobre o seu projeto</h1>
+        <p class="eyebrow">Contato</p>
+        <h1>Vamos falar sobre <em>o seu projeto</em></h1>
         <p class="lede">Preencha o formulário com o máximo de detalhe possível. Quanto mais contexto, mais preciso é o diagnóstico que você recebe de volta.</p>
       </div>
     </section>
 
-    <section aria-labelledby="form-h2">
-      <div class="container">
-        <div class="form-grid">
-          <div data-reveal>
-            <h2 id="form-h2" class="visually-hidden">Formulário de contato</h2>
-
-            <form id="contact-form" novalidate>
-              <div class="field">
-                <label for="name">Nome completo</label>
-                <input type="text" id="name" name="name" autocomplete="name" required aria-describedby="name-error" />
-                <p class="field-error" id="name-error" role="alert"></p>
-              </div>
-
-              <div class="field">
-                <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-error" />
-                <p class="field-error" id="email-error" role="alert"></p>
-              </div>
-
-              <div class="field">
-                <label for="phone">Telefone / WhatsApp <span style="color:var(--color-text-muted); font-weight:400;">(opcional)</span></label>
-                <input type="tel" id="phone" name="phone" autocomplete="tel" />
-              </div>
-
-              <div class="field">
-                <label for="service">Tipo de serviço</label>
-                <select id="service" name="service" required aria-describedby="service-error">
-                  <option value="">Selecione…</option>
-                  <option value="site">Site institucional / landing page</option>
-                  <option value="automacao">Automação</option>
-                  <option value="app">Aplicativo</option>
-                  <option value="saas">SaaS / micro-SaaS</option>
-                  <option value="outro">Ainda não sei / outro</option>
-                </select>
-                <p class="field-error" id="service-error" role="alert"></p>
-              </div>
-
-              <div class="field">
-                <label for="message">Conte sobre o projeto</label>
-                <textarea id="message" name="message" required aria-describedby="message-error"></textarea>
-                <p class="hint">O que você precisa resolver, prazo desejado e qualquer referência que ajude a entender o contexto.</p>
-                <p class="field-error" id="message-error" role="alert"></p>
-              </div>
-
-              <button type="submit" class="btn btn-primary">Enviar</button>
-
-              <p class="form-status" role="status" aria-live="polite"></p>
-            </form>
+    <section class="section" aria-labelledby="form-h2">
+      <div class="container contact-layout">
+        <div class="form-card" data-reveal>
+          <div class="form-card-head">
+            <h2 id="form-h2">Pedir diagnóstico</h2>
+            <p>Todos os campos são obrigatórios, exceto o telefone.</p>
           </div>
 
-          <div data-reveal>
-            <h4>Outros canais</h4>
+          <form id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="field" data-field="name">
+                <label for="name">Nome completo</label>
+                <input type="text" id="name" name="name" autocomplete="name" required aria-describedby="name-error" />
+                <p class="field-error" id="name-error" aria-live="polite"></p>
+              </div>
+
+              <div class="field" data-field="email">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" autocomplete="email" inputmode="email" required aria-describedby="email-error" />
+                <p class="field-error" id="email-error" aria-live="polite"></p>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="phone">Telefone / WhatsApp <span class="optional">(opcional)</span></label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" />
+            </div>
+
+            <fieldset class="field" data-field="service" aria-describedby="service-error">
+              <legend>Tipo de serviço</legend>
+              <div class="choices">
+                <label class="choice"><input type="radio" name="service" value="site" required /><span>Site / landing page</span></label>
+                <label class="choice"><input type="radio" name="service" value="automacao" /><span>Automação</span></label>
+                <label class="choice"><input type="radio" name="service" value="app" /><span>Aplicativo</span></label>
+                <label class="choice"><input type="radio" name="service" value="saas" /><span>SaaS / micro-SaaS</span></label>
+                <label class="choice"><input type="radio" name="service" value="outro" /><span>Ainda não sei / outro</span></label>
+              </div>
+              <p class="field-error" id="service-error" aria-live="polite"></p>
+            </fieldset>
+
+            <div class="field" data-field="message">
+              <label for="message">Conte sobre o projeto</label>
+              <textarea id="message" name="message" required aria-describedby="message-hint message-error"></textarea>
+              <p class="hint" id="message-hint">O que você precisa resolver, prazo desejado e qualquer referência que ajude a entender o contexto.</p>
+              <p class="field-error" id="message-error" aria-live="polite"></p>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg form-submit">
+              Enviar mensagem
+              <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <aside class="contact-aside" aria-labelledby="next-h2" data-reveal>
+          <h2 id="next-h2">O que acontece depois</h2>
+          <ol class="next-steps">
+            <li class="next-step">
+              <span class="next-step-num" aria-hidden="true">01</span>
+              <div>
+                <h3>Você envia o formulário</h3>
+                <p>Com o contexto que tiver: o problema, o prazo e as ferramentas que já usa.</p>
+              </div>
+            </li>
+            <li class="next-step">
+              <span class="next-step-num" aria-hidden="true">02</span>
+              <div>
+                <h3>Respondemos em até 1 dia útil</h3>
+                <p>Quem responde é quem vai construir o projeto.</p>
+              </div>
+            </li>
+            <li class="next-step">
+              <span class="next-step-num" aria-hidden="true">03</span>
+              <div>
+                <h3>Diagnóstico e proposta</h3>
+                <p>Escopo, prazo e valor fechados por escrito — antes de você pagar qualquer valor.</p>
+              </div>
+            </li>
+          </ol>
+
+          <div class="contact-channels">
+            <h2>Outros canais</h2>
             <p class="placeholder-note">Prefere falar direto? Use um dos canais abaixo (dados a confirmar antes da publicação).</p>
             <ul class="contact-info">
               <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                 <a href="tel:+5500000000000">[INSERIR: telefone]</a>
               </li>
               <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
                 <a href="mailto:contato@mecanosolucoes.com.br">[INSERIR: e-mail]</a>
               </li>
               <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                 <span>[INSERIR: cidade/UF]</span>
               </li>
             </ul>
           </div>
-        </div>
+        </aside>
       </div>
     </section>
   </main>
+
 
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a class="logo" href="index.html" style="color:var(--color-text-inverse)">
-            <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#141416"/><path d="M8 22V10l8 7 8-7v12" fill="none" stroke="#ff5a1f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Mecano
+          <a class="logo" href="index.html" aria-label="Mecano Soluções Digitais — início">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="0.5" y="0.5" width="31" height="31" rx="7" fill="#181613" stroke="#2c2924"/><path d="M8 22V10l8 7 8-7v12" fill="none" stroke="#ff5a1f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Mecano</span>
           </a>
           <p>Soluções digitais sob medida: sites, automações, apps e SaaS.</p>
           <div class="footer-social">
-            <a href="#" aria-label="Mecano no Instagram (link a confirmar)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a>
-            <a href="#" aria-label="Mecano no LinkedIn (link a confirmar)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="8" y1="11" x2="8" y2="16"/><line x1="8" y1="8" x2="8" y2="8"/><line x1="12" y1="11" x2="12" y2="16"/><path d="M12 13c0-1.5 2-2 3-1s1 1.5 1 2v2"/></svg></a>
+            <a href="#" aria-label="Mecano no Instagram (link a confirmar)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.75" fill="currentColor" stroke="none"/></svg></a>
+            <a href="#" aria-label="Mecano no LinkedIn (link a confirmar)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
           </div>
         </div>
         <div class="footer-col">
-          <h4>Navegação</h4>
+          <h2>Navegação</h2>
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="sobre.html">Sobre</a></li>
@@ -158,7 +199,7 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Serviços</h4>
+          <h2>Serviços</h2>
           <ul>
             <li><a href="servicos.html#sites">Sites</a></li>
             <li><a href="servicos.html#automacoes">Automações</a></li>
@@ -167,7 +208,7 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Contato</h4>
+          <h2>Contato</h2>
           <ul>
             <li><a href="tel:+5500000000000">[INSERIR: telefone]</a></li>
             <li><a href="mailto:contato@mecanosolucoes.com.br">[INSERIR: e-mail]</a></li>
@@ -179,6 +220,7 @@
         <span>CNPJ [INSERIR: CNPJ] · [INSERIR: cidade/UF]</span>
       </div>
     </div>
+    <div class="footer-wordmark" aria-hidden="true" data-text="Mecano"></div>
   </footer>
 
   <script src="js/main.js"></script>

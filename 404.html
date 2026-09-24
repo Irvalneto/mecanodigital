@@ -5,12 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Página não encontrada — Mecano Soluções Digitais</title>
   <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#0e0d0b" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/tokens.css" />
   <link rel="stylesheet" href="css/style.css" />
+  <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
   <a class="skip-link" href="#main">Pular para o conteúdo</a>
@@ -18,9 +20,10 @@
   <header class="site-header">
     <div class="container bar">
       <a class="logo" href="index.html" aria-label="Mecano Soluções Digitais — início">
-        <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#0a0a0b"/><path d="M8 22V10l8 7 8-7v12" fill="none" stroke="#ff5a1f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        Mecano
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="0.5" y="0.5" width="31" height="31" rx="7" fill="#181613" stroke="#2c2924"/><path d="M8 22V10l8 7 8-7v12" fill="none" stroke="#ff5a1f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Mecano</span>
       </a>
+
       <nav class="nav-primary" aria-label="Navegação principal">
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -29,40 +32,52 @@
           <li><a href="contato.html">Contato</a></li>
         </ul>
       </nav>
-      <a class="btn btn-primary nav-cta" href="contato.html">Pedir diagnóstico</a>
-      <button class="menu-toggle" aria-expanded="false" aria-controls="nav-mobile" aria-label="Abrir menu">
-        <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+
+      <a class="btn btn-primary btn-sm nav-cta" href="contato.html">
+        Pedir diagnóstico
+        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-mobile" aria-label="Abrir menu">
+        <span class="menu-toggle-bars" aria-hidden="true"></span>
       </button>
     </div>
   </header>
 
-  <nav class="nav-mobile" id="nav-mobile" aria-label="Navegação mobile">
+  <nav class="nav-mobile" id="nav-mobile" aria-label="Navegação mobile" inert>
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="sobre.html">Sobre</a></li>
-      <li><a href="servicos.html">Serviços</a></li>
-      <li><a href="contato.html">Contato</a></li>
+      <li><a href="index.html"><span class="nav-mobile-num">01</span>Home</a></li>
+      <li><a href="sobre.html"><span class="nav-mobile-num">02</span>Sobre</a></li>
+      <li><a href="servicos.html"><span class="nav-mobile-num">03</span>Serviços</a></li>
+      <li><a href="contato.html"><span class="nav-mobile-num">04</span>Contato</a></li>
     </ul>
-    <a class="btn btn-primary" href="contato.html">Pedir diagnóstico</a>
+    <a class="btn btn-primary btn-lg" href="contato.html">Pedir diagnóstico gratuito</a>
   </nav>
 
   <main id="main">
-    <section class="page-404">
+    <section class="page-404 section-dark">
+      <div class="blueprint" aria-hidden="true"></div>
       <div class="container">
-        <span class="code">404</span>
+        <p class="code-404" aria-hidden="true">404</p>
         <h1>Essa página não existe (ou mudou de endereço).</h1>
         <p class="lede">Confira o link ou volte para a home — o menu principal continua todo funcional.</p>
-        <a class="btn btn-primary" href="index.html">Voltar para a home</a>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="index.html">
+            Voltar para a home
+            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-outline-inverse btn-lg" href="contato.html">Falar com a Mecano</a>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+
+  <footer class="site-footer site-footer--compact">
     <div class="container">
       <div class="footer-bottom">
         <span>© <span data-year>2026</span> Mecano Soluções Digitais. Todos os direitos reservados.</span>
-        <a href="index.html" style="color:var(--color-text-inverse)">mecanosolucoes.com.br</a>
+        <a href="index.html">mecanosolucoes.com.br</a>
       </div>
     </div>
   </footer>
