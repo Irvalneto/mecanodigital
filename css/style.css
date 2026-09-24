@@ -166,20 +166,24 @@ mark.hl {
   min-height: var(--header-h);
 }
 
+/* Assinatura curta da marca: sextavado + MECANO (proporções do manual:
+   versal da palavra ≈ 47% da altura do sextavado, respiro ≈ 26%) */
 .logo {
   display: inline-flex;
   align-items: center;
-  gap: var(--sp-3);
+  gap: 8px;
   font-family: var(--font-display);
-  font-stretch: 118%;
-  font-weight: 700;
-  font-size: 1.1875rem;
-  letter-spacing: -0.03em;
+  font-stretch: 125%;
+  font-weight: 800;
+  font-size: 1.25rem;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
   color: var(--color-text-inverse);
   text-decoration: none;
   min-height: 44px;
 }
-.logo svg { width: 30px; height: 30px; }
+.logo svg { width: 26px; height: 30px; }
 
 .nav-primary { display: none; }
 .nav-primary ul { list-style: none; display: flex; gap: var(--sp-2); margin: 0; padding: 0; }
