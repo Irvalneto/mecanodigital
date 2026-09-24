@@ -10,12 +10,15 @@
   <meta property="og:title" content="Serviços — Mecano Soluções Digitais" />
   <meta property="og:description" content="Sites, automações, apps e SaaS — o que está incluso em cada um." />
   <meta property="og:locale" content="pt_BR" />
+  <meta name="theme-color" content="#0e0d0b" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="apple-touch-icon" href="marca/logo/png/mecano-icone-app-180.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/tokens.css" />
   <link rel="stylesheet" href="css/style.css" />
+  <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
   <a class="skip-link" href="#main">Pular para o conteúdo</a>
@@ -23,9 +26,10 @@
   <header class="site-header">
     <div class="container bar">
       <a class="logo" href="index.html" aria-label="Mecano Soluções Digitais — início">
-        <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#0a0a0b"/><path d="M8 22V10l8 7 8-7v12" fill="none" stroke="#ff5a1f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        Mecano
+        <svg viewBox="6.89 3 50.22 58" aria-hidden="true"><path fill="#ff5a1f" fill-rule="evenodd" d="M30.400 3.924A3.2 3.2 0 0 1 33.600 3.924L55.515 16.576A3.2 3.2 0 0 1 57.115 19.348L57.115 44.652A3.2 3.2 0 0 1 55.515 47.424L33.600 60.076A3.2 3.2 0 0 1 30.400 60.076L8.485 47.424A3.2 3.2 0 0 1 6.885 44.652L6.885 19.348A3.2 3.2 0 0 1 8.485 16.576ZM19.65 40.36V22.98H27.68L30.66 30.54Q30.86 30.99 31.10 31.70Q31.34 32.41 31.58 33.15Q31.82 33.90 32.03 34.48H32.20Q32.35 33.95 32.59 33.24Q32.83 32.53 33.10 31.81Q33.36 31.09 33.57 30.54L36.55 22.98H44.35V40.36H39.22V31.40Q39.22 30.87 39.24 30.21Q39.25 29.55 39.28 28.92Q39.30 28.29 39.30 27.84H39.10Q38.95 28.31 38.72 28.97Q38.49 29.63 38.28 30.27Q38.06 30.92 37.86 31.40L34.22 40.36H29.52L25.86 31.40Q25.61 30.74 25.37 30.06Q25.13 29.38 24.94 28.78Q24.75 28.19 24.62 27.84H24.42Q24.45 28.19 24.46 28.77Q24.47 29.35 24.48 30.03Q24.50 30.71 24.50 31.40V40.36Z"/></svg>
+        <span>Mecano</span>
       </a>
+
       <nav class="nav-primary" aria-label="Navegação principal">
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -34,130 +38,172 @@
           <li><a href="contato.html">Contato</a></li>
         </ul>
       </nav>
-      <a class="btn btn-primary nav-cta" href="contato.html">Pedir diagnóstico</a>
-      <button class="menu-toggle" aria-expanded="false" aria-controls="nav-mobile" aria-label="Abrir menu">
-        <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+
+      <a class="btn btn-primary btn-sm nav-cta" href="contato.html">
+        Pedir diagnóstico
+        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-mobile" aria-label="Abrir menu">
+        <span class="menu-toggle-bars" aria-hidden="true"></span>
       </button>
     </div>
   </header>
 
-  <nav class="nav-mobile" id="nav-mobile" aria-label="Navegação mobile">
+  <nav class="nav-mobile" id="nav-mobile" aria-label="Navegação mobile" inert>
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="sobre.html">Sobre</a></li>
-      <li><a href="servicos.html">Serviços</a></li>
-      <li><a href="contato.html">Contato</a></li>
+      <li><a href="index.html"><span class="nav-mobile-num">01</span>Home</a></li>
+      <li><a href="sobre.html"><span class="nav-mobile-num">02</span>Sobre</a></li>
+      <li><a href="servicos.html" aria-current="page"><span class="nav-mobile-num">03</span>Serviços</a></li>
+      <li><a href="contato.html"><span class="nav-mobile-num">04</span>Contato</a></li>
     </ul>
-    <a class="btn btn-primary" href="contato.html">Pedir diagnóstico</a>
+    <a class="btn btn-primary btn-lg" href="contato.html">Pedir diagnóstico gratuito</a>
   </nav>
 
   <main id="main">
-    <section class="hero section-dark">
+    <section class="page-hero section-dark">
+      <div class="blueprint" aria-hidden="true"></div>
       <div class="container">
-        <span class="tag">Serviços</span>
-        <h1>Quatro formas de resolver um problema digital</h1>
+        <p class="eyebrow">Serviços</p>
+        <h1>Quatro formas de resolver <em>um problema digital</em></h1>
         <p class="lede">Cada serviço abaixo tem escopo e entregáveis claros. Se o seu caso é uma mistura de mais de um, o diagnóstico inicial já resolve isso.</p>
       </div>
     </section>
 
-    <section aria-label="Detalhes dos serviços">
-      <div class="container">
-        <div class="service-detail-grid">
-          <aside class="hook-sidebar" id="hook-sidebar" aria-label="Navegação rápida entre serviços">
-            <button type="button" class="hook-sidebar-toggle" id="hook-sidebar-toggle" aria-expanded="false" aria-controls="hook-sidebar-list" aria-label="Expandir navegação de serviços">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="9" y1="4" x2="9" y2="20"/></svg>
-            </button>
-            <ul class="hook-sidebar-list" id="hook-sidebar-list">
-              <li><a href="#sites"><span class="num">01</span><span class="label">Sites</span></a></li>
-              <li><a href="#automacoes"><span class="num">02</span><span class="label">Automações</span></a></li>
-              <li><a href="#apps"><span class="num">03</span><span class="label">Aplicativos</span></a></li>
-              <li><a href="#saas"><span class="num">04</span><span class="label">SaaS</span></a></li>
-            </ul>
-          </aside>
+    <section class="section" aria-label="Detalhes dos serviços">
+      <div class="container services-wrap">
+        <nav class="service-index" id="service-index" aria-label="Navegação rápida entre serviços">
+          <p class="service-index-title">Índice</p>
+          <ul>
+            <li><a href="#sites"><span class="num">01</span>Sites</a></li>
+            <li><a href="#automacoes"><span class="num">02</span>Automações</a></li>
+            <li><a href="#apps"><span class="num">03</span>Aplicativos</a></li>
+            <li><a href="#saas"><span class="num">04</span>SaaS</a></li>
+          </ul>
+        </nav>
 
-          <div class="service-block-list">
-            <section id="sites" class="service-block" aria-labelledby="sites-h2" data-reveal>
-              <span class="tag">01 / 04</span>
-              <h2 id="sites-h2">Sites institucionais &amp; landing pages</h2>
-              <p class="lede">Para quem precisa de presença digital que <span class="hl"><span class="hl-bg" aria-hidden="true"></span>gera contato qualificado</span>, não só um cartão de visita online.</p>
-              <h4>O que está incluso</h4>
-              <ul>
-                <li>Design responsivo mobile-first, testado em telas reais</li>
-                <li>Copy orientado a conversão (sem lorem ipsum na entrega)</li>
-                <li>SEO técnico básico: metadados, sitemap, performance de carregamento</li>
-                <li>Formulário de contato funcional com validação e mensagens de erro/sucesso</li>
-                <li>Página 404 personalizada e checklist de QA antes do lançamento</li>
+        <div class="service-list">
+          <article id="sites" class="service-card" aria-labelledby="sites-h2" data-reveal>
+            <div class="service-card-top">
+              <p class="kicker"><span class="kicker-num">01</span>de 04</p>
+              <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span>
+            </div>
+            <h2 id="sites-h2">Sites institucionais &amp; landing pages</h2>
+            <p class="lede">Para quem precisa de presença digital que <mark class="hl">gera contato qualificado</mark>, não só um cartão de visita online.</p>
+            <div class="included">
+              <h3>O que está incluso</h3>
+              <ul class="checklist">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Design responsivo mobile-first, testado em telas reais</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Copy orientado a conversão (sem lorem ipsum na entrega)</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> SEO técnico básico: metadados, sitemap, performance de carregamento</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Formulário de contato funcional com validação e mensagens de erro/sucesso</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Página 404 personalizada e checklist de QA antes do lançamento</li>
               </ul>
-            </section>
+            </div>
+            <div class="service-card-foot">
+              <a class="btn btn-ghost" href="contato.html?servico=site">Pedir diagnóstico de site <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </article>
 
-            <section id="automacoes" class="service-block" aria-labelledby="automacoes-h2" data-reveal>
-              <span class="tag">02 / 04</span>
-              <h2 id="automacoes-h2">Automações</h2>
-              <p class="lede">Para quem perde horas por semana copiando dados entre planilha, formulário, CRM e WhatsApp manualmente.</p>
-              <h4>O que está incluso</h4>
-              <ul>
-                <li>Mapeamento do processo atual e dos pontos de retrabalho</li>
-                <li>Integração entre as ferramentas que você já usa</li>
-                <li>Notificações e alertas automáticos (e-mail, WhatsApp, Slack)</li>
-                <li>Documentação de como o fluxo funciona, para manutenção futura</li>
+          <article id="automacoes" class="service-card" aria-labelledby="automacoes-h2" data-reveal>
+            <div class="service-card-top">
+              <p class="kicker"><span class="kicker-num">02</span>de 04</p>
+              <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect x="13" y="13" width="8" height="8" rx="2"/></svg></span>
+            </div>
+            <h2 id="automacoes-h2">Automações</h2>
+            <p class="lede">Para quem perde horas por semana copiando dados entre planilha, formulário, CRM e WhatsApp manualmente.</p>
+            <div class="included">
+              <h3>O que está incluso</h3>
+              <ul class="checklist">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Mapeamento do processo atual e dos pontos de retrabalho</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Integração entre as ferramentas que você já usa</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Notificações e alertas automáticos (e-mail, WhatsApp, Slack)</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Documentação de como o fluxo funciona, para manutenção futura</li>
               </ul>
-            </section>
+            </div>
+            <div class="service-card-foot">
+              <a class="btn btn-ghost" href="contato.html?servico=automacao">Pedir diagnóstico de automação <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </article>
 
-            <section id="apps" class="service-block" aria-labelledby="apps-h2" data-reveal>
-              <span class="tag">03 / 04</span>
-              <h2 id="apps-h2">Aplicativos</h2>
-              <p class="lede">Para um processo interno que precisa de tela própria, ou um produto que o seu cliente final vai usar direto.</p>
-              <h4>O que está incluso</h4>
-              <ul>
-                <li>Levantamento de requisitos e fluxo de usuário antes de codar</li>
-                <li>Interface web e/ou mobile, com estados de carregamento, vazio e erro tratados</li>
-                <li>Autenticação e controle de acesso quando o caso pedir</li>
-                <li>Entrega com código-fonte e documentação de deploy</li>
+          <article id="apps" class="service-card" aria-labelledby="apps-h2" data-reveal>
+            <div class="service-card-top">
+              <p class="kicker"><span class="kicker-num">03</span>de 04</p>
+              <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20M6 4v5M10 4v5"/></svg></span>
+            </div>
+            <h2 id="apps-h2">Aplicativos</h2>
+            <p class="lede">Para um processo interno que precisa de tela própria, ou um produto que o seu cliente final vai usar direto.</p>
+            <div class="included">
+              <h3>O que está incluso</h3>
+              <ul class="checklist">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Levantamento de requisitos e fluxo de usuário antes de codar</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Interface web e/ou mobile, com estados de carregamento, vazio e erro tratados</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Autenticação e controle de acesso quando o caso pedir</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Entrega com código-fonte e documentação de deploy</li>
               </ul>
-            </section>
+            </div>
+            <div class="service-card-foot">
+              <a class="btn btn-ghost" href="contato.html?servico=app">Pedir diagnóstico de aplicativo <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </article>
 
-            <section id="saas" class="service-block" aria-labelledby="saas-h2" data-reveal>
-              <span class="tag">04 / 04</span>
-              <h2 id="saas-h2">SaaS &amp; micro-SaaS</h2>
-              <p class="lede">Do MVP validável ao primeiro cliente pagante, com arquitetura que aguenta crescer sem reescrever tudo depois.</p>
-              <h4>O que está incluso</h4>
-              <ul>
-                <li>Definição de MVP: o menor produto que já entrega valor real</li>
-                <li>Cobrança e assinatura (quando aplicável)</li>
-                <li>Painel de administração e métricas básicas de uso</li>
-                <li>Plano técnico para as próximas etapas, não só o lançamento</li>
+          <article id="saas" class="service-card" aria-labelledby="saas-h2" data-reveal>
+            <div class="service-card-top">
+              <p class="kicker"><span class="kicker-num">04</span>de 04</p>
+              <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg></span>
+            </div>
+            <h2 id="saas-h2">SaaS &amp; micro-SaaS</h2>
+            <p class="lede">Do MVP validável ao primeiro cliente pagante, com arquitetura que aguenta crescer sem reescrever tudo depois.</p>
+            <div class="included">
+              <h3>O que está incluso</h3>
+              <ul class="checklist">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Definição de MVP: o menor produto que já entrega valor real</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Cobrança e assinatura (quando aplicável)</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Painel de administração e métricas básicas de uso</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Plano técnico para as próximas etapas, não só o lançamento</li>
               </ul>
-            </section>
-          </div>
+            </div>
+            <div class="service-card-foot">
+              <a class="btn btn-ghost" href="contato.html?servico=saas">Pedir diagnóstico de SaaS <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="cta-band section-dark">
+    <section class="cta-section" aria-labelledby="cta-h2">
       <div class="container">
-        <h2>Qual desses é o seu caso?</h2>
-        <a class="btn btn-inverse" href="contato.html">Pedir diagnóstico gratuito</a>
+        <div class="cta-panel" data-reveal>
+          <div class="cta-copy">
+            <h2 id="cta-h2">Qual desses é o seu caso?</h2>
+            <p>Se ainda não sabe, tudo bem — o diagnóstico existe para isso.</p>
+          </div>
+          <a class="btn btn-dark btn-lg" href="contato.html">
+            Pedir diagnóstico gratuito
+            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
       </div>
     </section>
   </main>
+
 
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a class="logo" href="index.html" style="color:var(--color-text-inverse)">
-            <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#141416"/><path d="M8 22V10l8 7 8-7v12" fill="none" stroke="#ff5a1f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Mecano
+          <a class="logo" href="index.html" aria-label="Mecano Soluções Digitais — início">
+            <svg viewBox="6.89 3 50.22 58" aria-hidden="true"><path fill="#ff5a1f" fill-rule="evenodd" d="M30.400 3.924A3.2 3.2 0 0 1 33.600 3.924L55.515 16.576A3.2 3.2 0 0 1 57.115 19.348L57.115 44.652A3.2 3.2 0 0 1 55.515 47.424L33.600 60.076A3.2 3.2 0 0 1 30.400 60.076L8.485 47.424A3.2 3.2 0 0 1 6.885 44.652L6.885 19.348A3.2 3.2 0 0 1 8.485 16.576ZM19.65 40.36V22.98H27.68L30.66 30.54Q30.86 30.99 31.10 31.70Q31.34 32.41 31.58 33.15Q31.82 33.90 32.03 34.48H32.20Q32.35 33.95 32.59 33.24Q32.83 32.53 33.10 31.81Q33.36 31.09 33.57 30.54L36.55 22.98H44.35V40.36H39.22V31.40Q39.22 30.87 39.24 30.21Q39.25 29.55 39.28 28.92Q39.30 28.29 39.30 27.84H39.10Q38.95 28.31 38.72 28.97Q38.49 29.63 38.28 30.27Q38.06 30.92 37.86 31.40L34.22 40.36H29.52L25.86 31.40Q25.61 30.74 25.37 30.06Q25.13 29.38 24.94 28.78Q24.75 28.19 24.62 27.84H24.42Q24.45 28.19 24.46 28.77Q24.47 29.35 24.48 30.03Q24.50 30.71 24.50 31.40V40.36Z"/></svg>
+            <span>Mecano</span>
           </a>
           <p>Soluções digitais sob medida: sites, automações, apps e SaaS.</p>
           <div class="footer-social">
-            <a href="#" aria-label="Mecano no Instagram (link a confirmar)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a>
-            <a href="#" aria-label="Mecano no LinkedIn (link a confirmar)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="8" y1="11" x2="8" y2="16"/><line x1="8" y1="8" x2="8" y2="8"/><line x1="12" y1="11" x2="12" y2="16"/><path d="M12 13c0-1.5 2-2 3-1s1 1.5 1 2v2"/></svg></a>
+            <a href="#" aria-label="Mecano no Instagram (link a confirmar)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.75" fill="currentColor" stroke="none"/></svg></a>
+            <a href="#" aria-label="Mecano no LinkedIn (link a confirmar)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
           </div>
         </div>
         <div class="footer-col">
-          <h4>Navegação</h4>
+          <h2>Navegação</h2>
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="sobre.html">Sobre</a></li>
@@ -166,7 +212,7 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Serviços</h4>
+          <h2>Serviços</h2>
           <ul>
             <li><a href="servicos.html#sites">Sites</a></li>
             <li><a href="servicos.html#automacoes">Automações</a></li>
@@ -175,7 +221,7 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Contato</h4>
+          <h2>Contato</h2>
           <ul>
             <li><a href="tel:+5500000000000">[INSERIR: telefone]</a></li>
             <li><a href="mailto:contato@mecanosolucoes.com.br">[INSERIR: e-mail]</a></li>
@@ -187,9 +233,9 @@
         <span>CNPJ [INSERIR: CNPJ] · [INSERIR: cidade/UF]</span>
       </div>
     </div>
+    <div class="footer-wordmark" aria-hidden="true" data-text="Mecano"></div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

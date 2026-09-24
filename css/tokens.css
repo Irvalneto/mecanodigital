@@ -1,49 +1,64 @@
 /* ============================================================
    DESIGN TOKENS — Mecano Soluções Digitais
-   Fonte única da verdade para cor, tipografia, espaço e forma.
-   Nenhum valor solto deve ser usado fora deste arquivo.
+   Fonte única da verdade para cor, tipografia, espaço, forma e
+   movimento. Nenhum valor solto deve ser usado fora deste arquivo.
    ============================================================ */
 
 :root {
   /* --- Cor ---------------------------------------------------
-     1 primária, 1 accent, 1 neutra escura, 1 neutra clara,
-     2 cores de apoio. 6 cores no total. */
-  --color-primary: #101113;       /* grafite quase preto — texto, botão em fundo claro */
-  --color-accent: #ff5a1f;        /* laranja-solda — única cor de ação/destaque */
-  --color-bg-dark: #0a0a0b;       /* neutra escura — hero, footer */
-  --color-bg-light: #faf9f7;      /* neutra clara — corpo do site */
-  --color-support-1: #6b7280;     /* cinza médio — texto secundário */
-  --color-support-2: #e4e4e7;     /* cinza claro — bordas, divisores */
+     Neutros levemente aquecidos (puxados para o laranja da marca)
+     em vez de cinza puro. Uma única cor de ação: laranja-solda.
+     Contraste verificado (WCAG AA) para todo par texto/fundo. */
+  --color-accent: #ff5a1f;        /* laranja-solda — ação/destaque; texto só em fundo escuro (6.2:1) */
+  --color-accent-hover: #ff7038;
+  --color-accent-ink: #b93a0b;    /* laranja para texto em fundo claro (5.1:1 no --color-bg-light) */
 
-  --color-surface: #ffffff;               /* variação de --color-bg-light para cards */
-  --color-surface-dark: #141416;          /* variação de --color-bg-dark para cards */
-  --color-border-dark: #27272a;           /* variação de --color-support-2 em fundo escuro */
-  --color-ink-inverse: #f5f5f4;           /* variação de --color-bg-light usada como texto em fundo escuro */
+  --color-primary: #141210;       /* grafite quente — texto principal */
+  --color-bg-light: #f4f2ec;      /* papel — corpo do site */
+  --color-surface: #fbfaf6;       /* cards/painéis sobre o papel */
+  --color-support-1: #6b655b;     /* texto secundário (5.2:1) */
+  --color-support-2: #e2ddd2;     /* bordas, divisores */
+  --color-line-strong: #cbc4b6;   /* borda em hover/estado ativo */
+
+  --color-bg-dark: #0e0d0b;       /* noite — hero, rodapé */
+  --color-surface-dark: #181613;  /* cards sobre a noite */
+  --color-border-dark: #2c2924;   /* bordas em fundo escuro */
+  --color-ink-inverse: #f4f2ec;   /* texto em fundo escuro */
 
   --color-text: var(--color-primary);
   --color-text-muted: var(--color-support-1);
   --color-text-inverse: var(--color-ink-inverse);
-  --color-text-inverse-muted: #9a9a9d;
+  --color-text-inverse-muted: #a29c90; /* 7.1:1 na noite */
 
-  --color-success: #1a7f4e;
-  --color-error: #c4321f;
+  --color-success: #17754a;
+  --color-success-bg: #e6f2ea;
+  --color-error: #b42b1a;
+  --color-error-bg: #fbe8e3;
 
   /* --- Tipografia ----------------------------------------------
-     Razão modular 1.25, base 16px. */
-  --font-display: "Space Grotesk", "Arial Narrow", sans-serif; /* headings — personalidade técnica */
-  --font-body: "Inter", -apple-system, "Segoe UI", sans-serif; /* leitura — alta legibilidade */
-  --font-mono: ui-monospace, "SFMono-Regular", "Consolas", "Liberation Mono", monospace; /* labels/tags técnicos */
+     Archivo variável: o eixo de largura (font-stretch) dá aos títulos
+     um desenho expandido, de chapa estampada; o corpo usa a largura
+     normal. JetBrains Mono para rótulos técnicos. */
+  --font-display: "Archivo", "Arial", sans-serif;
+  --font-body: "Archivo", -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", "Consolas", monospace;
 
-  --fs-small: 1rem;        /* 16px */
-  --fs-body: 1.25rem;      /* 20px */
-  --fs-h4: 1.5625rem;      /* 25px */
-  --fs-h3: 1.953rem;       /* 31px */
-  --fs-h2: 2.441rem;       /* 39px */
-  --fs-h1: 3.052rem;       /* 49px */
-  --fs-display: 3.815rem;  /* 61px */
+  --stretch-display: 112%;
 
-  --lh-heading: 1.15;
+  --fs-micro: 0.75rem;                                   /* 12px — rótulos mono */
+  --fs-small: 0.9375rem;                                 /* 15px */
+  --fs-base: 1.0625rem;                                  /* 17px — corpo */
+  --fs-body: clamp(1.125rem, 1.05rem + 0.35vw, 1.3125rem); /* 18→21px — lede */
+  --fs-h4: 1.25rem;                                      /* 20px */
+  --fs-h3: clamp(1.5rem, 1.3rem + 0.8vw, 1.875rem);      /* 24→30px */
+  --fs-h2: clamp(2rem, 1.45rem + 2.4vw, 3.25rem);        /* 32→52px */
+  --fs-h1: clamp(2.375rem, 1.6rem + 3.4vw, 4.25rem);     /* 38→68px */
+  --fs-display: clamp(2.625rem, 1.5rem + 5vw, 5.5rem);   /* 42→88px */
+
+  --lh-heading: 1.02;
   --lh-body: 1.6;
+  --tracking-tight: -0.035em;
+  --tracking-label: 0.1em;
 
   /* --- Espaço (múltiplos de 4/8px) --- */
   --sp-1: 0.25rem;   /* 4px */
@@ -57,30 +72,40 @@
   --sp-9: 6rem;      /* 96px */
   --sp-10: 8rem;     /* 128px */
 
+  --section-y: clamp(4.5rem, 3rem + 6vw, 8rem);
+
   /* --- Grid --- */
-  --container-max: 1200px;
-  --gutter: var(--sp-5); /* 24px desktop */
+  --container-max: 1240px;
+  --gutter: 1rem; /* 16px mobile */
+  --header-h: 68px;
 
   /* --- Forma --- */
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 16px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 18px;
+  --radius-xl: 28px;
 
-  --shadow-sm: 0 1px 2px rgba(16, 17, 19, 0.06);
-  --shadow-md: 0 8px 24px rgba(16, 17, 19, 0.08);
+  --shadow-sm: 0 1px 2px rgb(20 18 16 / 0.06);
+  --shadow-md: 0 1px 2px rgb(20 18 16 / 0.04), 0 12px 32px -12px rgb(20 18 16 / 0.18);
+  --shadow-lg: 0 24px 64px -24px rgb(0 0 0 / 0.6);
 
-  /* --- Movimento --- */
-  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  /* --- Movimento ----------------------------------------------
+     Curvas de saída fortes: começam rápidas (resposta imediata) e
+     assentam devagar. Interações do dia a dia ficam abaixo de 250ms. */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+  --dur-press: 120ms;
   --dur-fast: 180ms;
-  --dur-base: 260ms;
-  --dur-enter: 420ms;
+  --dur-base: 240ms;
+  --dur-enter: 560ms;
+  --stagger: 70ms;
 }
 
 @media (min-width: 768px) {
-  :root { --gutter: var(--sp-6); }
+  :root { --gutter: 2rem; --header-h: 76px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  :root { --dur-fast: 0ms; --dur-base: 0ms; --dur-enter: 0ms; }
+  :root { --dur-press: 0ms; --dur-fast: 0ms; --dur-base: 0ms; --dur-enter: 0ms; --stagger: 0ms; }
 }
